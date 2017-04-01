@@ -1,0 +1,14 @@
+#!/bin/bash
+## Deletes a Player
+##
+## Usage:
+##  $0 {player id}
+##
+
+if [ $# == 0 ]
+then
+    usage $0
+    exit 0
+fi
+
+curl -i -X DELETE localhost:8080/players/$1
