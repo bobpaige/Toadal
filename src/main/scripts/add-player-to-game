@@ -1,0 +1,22 @@
+#!/bin/bash
+## Adds a player to a game
+##
+## Usage:
+##  $0 {game num} {player num}
+##
+# Research:
+# https://groups.google.com/forum/#!topic/api-craft/iD-mvFCgQuU
+
+if [ $# == 0 ]
+then
+    usage $0
+    exit 0
+fi
+
+for name in $*
+do
+    curl -i -X PUT -H "Content-Type:application/json" -d \
+    '{"id":"'$22'"}' \
+    localhost:8080/games
+done
+
