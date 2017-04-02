@@ -28,7 +28,11 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	runtime('org.springframework.boot:spring-boot-devtools')
-	runtime('com.h2database:h2')
+	//runtime('com.h2database:h2')
+	runtime('mysql:mysql-connector-java')
+	
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+        compile group: 'org.kohsuke', name: 'wordnet-random-name', version: '1.3'
 }
